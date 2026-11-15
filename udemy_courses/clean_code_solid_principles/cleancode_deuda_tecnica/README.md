@@ -63,3 +63,10 @@ Apuntes visuales sobre parámetros y argumentos:
 Apuntes visuales sobre el orden de los argumentos y las buenas prácticas al llamar a una función:
 
 ![Orden de los argumentos y buenas prácticas al llamar a funciones](parametros_argumentos_funciones_2.png)
+
+
+Lo improtante de las funciones es que deebmos bucasr que sean simples, su simplicidad es fundamental.
+Que tengan tamaño reducido
+Hay que darles prioridad a funciones de una sola linea sin causar complejidad.
+
+Evitar el uso de "else"
