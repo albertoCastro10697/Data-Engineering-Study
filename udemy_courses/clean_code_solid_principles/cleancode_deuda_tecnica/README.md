@@ -64,9 +64,16 @@ Apuntes visuales sobre el orden de los argumentos y las buenas prácticas al lla
 
 ![Orden de los argumentos y buenas prácticas al llamar a funciones](parametros_argumentos_funciones_2.png)
 
+### Simplicidad de las funciones
 
-Lo improtante de las funciones es que deebmos bucasr que sean simples, su simplicidad es fundamental.
-Que tengan tamaño reducido
-Hay que darles prioridad a funciones de una sola linea sin causar complejidad.
+- Mantén las funciones cortas y fáciles de entender.
+- Una función de una sola línea puede ser una buena opción si sigue siendo legible.
+- Evita `else` cuando una salida temprana simplifique el flujo de la función.
 
-Evitar el uso de "else"
+### Principio DRY (Don't Repeat Yourself)
+
+DRY propone evitar la duplicación de código. Cuando varios lugares repiten la misma lógica, centralizarla ayuda a simplificar las pruebas y facilita el mantenimiento. Aplicar este principio suele implicar refactorizar el código existente.
+
+## Material del curso
+
+[Repositorio de la sección 2 — Clean Code y deuda técnica](https://github.com/Klerith/clean-course/tree/fin-seccion-02)
