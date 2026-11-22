@@ -1,0 +1,49 @@
+# This is a Databricks asset bundle definition for dab_project.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: dab_project_2
+  uuid: 9f4101da-e61c-47ea-b205-6857c989f64e
+
+include:
+  - resources/*.yml
+  - resources/*/*.yml
+
+targets:
+  dev:
+    # The default target uses 'mode: development' to create a development copy.
+    # - Deployed resources get prefixed with '[dev my_user_name]'
+    # - Any job schedules and triggers are paused by default.
+    # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
+    mode: development
+    presets:
+      name_prefix: '[development_${workspace.current_user.short_name}]'
+      trigger_pause_status: PAUSED
+    default: true
+    workspace:
+      host: https://adb-2396707599565047.7.azuredatabricks.net
+      root_path: /Workspace/Users/albert_106@hotmail.com/bundle_deployments/${bundle.name}/${bundle.target}
+
+  stg:
+    mode: production
+    presets:
+      name_prefix: '[staging]'
+      trigger_pause_status: PAUSED
+    workspace:
+      host: https://adb-2704442375392834.14.azuredatabricks.net
+      # We explicitly deploy to /Workspace/Users/Shared to make sure we only have a single copy.
+      root_path: /Workspace/Shared/bundle_deployments/${bundle.name}/${bundle.target}
+    permissions:
+      - user_name: albert_106@hotmail.com
+        level: CAN_MANAGE
+
+  prod:
+    mode: production
+    presets:
+      name_prefix: '[production]'
+    workspace:
+      host: https://adb-651991951135234.14.azuredatabricks.net
+      # We explicitly deploy to /Workspace/Users/Shared to make sure we only have a single copy.
+      root_path: /Workspace/Shared/bundle_deployments/${bundle.name}/${bundle.target}
+    permissions:
+      - user_name: albert_106@hotmail.com
+        level: CAN_MANAGE
