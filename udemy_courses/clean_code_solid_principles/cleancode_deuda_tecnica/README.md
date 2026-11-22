@@ -2,48 +2,34 @@
 
 ## ¿Qué es la deuda técnica?
 
-La deuda técnica es la falta de calidad en algún aspecto del software. Puede generarse de forma intencional o involuntaria y afectar al código, las pruebas o la documentación. También puede acumularse cuando se pospone una refactorización necesaria.
+La deuda técnica es el costo futuro que se genera al elegir una solución que facilita el trabajo inmediato, pero hace más difícil mantener o evolucionar el software. Puede asumirse de forma consciente o aparecer sin que el equipo la advierta. No toda deuda es necesariamente irresponsable: a veces una decisión temporal es razonable, siempre que se conozca y se gestione.
 
-Por ejemplo, cuando se prioriza una salida a producción y se deja pendiente una mejora o corrección, se puede asumir deuda técnica.
+Por ejemplo, se puede posponer una refactorización para cumplir una fecha de entrega. Si esa decisión queda sin seguimiento, los cambios futuros pueden requerir más tiempo y esfuerzo.
 
-### ¿Qué consecuencias tiene?
+### Cuadrantes de la deuda técnica
 
-La falta de calidad puede repercutir en el futuro y generar costos económicos por el tiempo adicional necesario para:
+La clasificación de Martin Fowler combina dos preguntas: ¿la deuda fue deliberada o inadvertida?, y ¿la decisión fue prudente o imprudente?
 
-- Realizar mantenimiento.
-- Refactorizar el código.
-- Comprender cómo funciona.
-- Transferir el conocimiento del código a otras personas.
-
-> La mala calidad del software siempre termina siendo asumida por alguien.
-
-## Cuadrantes de la deuda técnica
-
-En mis apuntes se mencionan cuatro cuadrantes. Por ahora, tengo registrados estos tres:
-
-| Tipo de deuda | Descripción |
+| Tipo | Descripción |
 | --- | --- |
-| Imprudente y deliberada | Se toman decisiones de forma consciente e imprudente, aun sabiendo que perjudican la calidad. |
-| Inadvertida | Se genera sin advertirla, por falta de experiencia o conocimiento. |
-| Prudente | Se reconoce la deuda y se acepta su existencia. Si no se resuelve a tiempo, después se pagan sus «intereses». |
+| Prudente y deliberada | Se conoce una solución mejor, pero se elige una alternativa temporal por una razón válida y se registra el trabajo pendiente. |
+| Imprudente y deliberada | Se conoce el riesgo, pero se toma el atajo sin un plan razonable para asumir o reducir sus consecuencias. |
+| Prudente e inadvertida | La deuda se descubre después, a pesar de que se tomaron decisiones razonables con el conocimiento disponible. |
+| Imprudente e inadvertida | La deuda aparece porque no se comprendieron prácticas o soluciones importantes que podrían haberse considerado. |
 
-**Pendiente:** completar el cuarto cuadrante y precisar la clasificación de los cuatro.
+La deuda técnica acumula intereses: cuanto más depende el sistema de una decisión difícil de cambiar, más costoso puede resultar cada cambio posterior.
 
-## ¿Cómo se paga la deuda técnica?
+### ¿Cómo reducirla?
 
-Una forma de reducirla es mediante la **refactorización**: mejorar la estructura interna del código sin alterar su comportamiento, para que sea más entendible y más fácil de adaptar a cambios.
-
-Lo ideal es contar con **pruebas automáticas** que ayuden a verificar que el comportamiento se mantiene después de los cambios.
+La **refactorización** mejora la estructura interna del código sin cambiar su comportamiento observable. Las pruebas automáticas ayudan a comprobar que ese comportamiento se mantiene durante la refactorización. También es útil registrar la deuda conocida y priorizarla junto con el trabajo del producto.
 
 ## ¿Qué es Clean Code?
 
-**Clean Code es código escrito con la intención de que otra persona lo entienda.**
-
-Una de sus prácticas es utilizar nombres claros y comprensibles para los conceptos, las variables y las funciones.
+Clean Code es código cuya intención resulta clara para las personas que deben leerlo, mantenerlo y modificarlo. Nombres expresivos, funciones acotadas y una estructura coherente ayudan a lograrlo.
 
 ### Nombres pronunciables y expresivos
 
-Los nombres deben comunicar qué representa cada elemento.
+Los nombres deben comunicar qué representa cada elemento y facilitar la conversación sobre el código.
 
 | Nombre poco claro | Nombre más expresivo |
 | --- | --- |
@@ -52,27 +38,25 @@ Los nombres deben comunicar qué representa cada elemento.
 | `cat` | `category` |
 | `ddmmyyyy` | `birthDate` |
 
-### Funciones: parámetros y argumentos
+### Parámetros y argumentos
 
 Apuntes visuales sobre parámetros y argumentos:
 
 ![Parámetros y argumentos de las funciones](parametros_argumentos_funciones.png)
 
-### Orden de los argumentos y buenas prácticas
-
-Apuntes visuales sobre el orden de los argumentos y las buenas prácticas al llamar a una función:
+Apuntes sobre el orden de los argumentos y buenas prácticas al llamar a una función:
 
 ![Orden de los argumentos y buenas prácticas al llamar a funciones](parametros_argumentos_funciones_2.png)
 
 ### Simplicidad de las funciones
 
-- Mantén las funciones cortas y fáciles de entender.
-- Una función de una sola línea puede ser una buena opción si sigue siendo legible.
-- Evita `else` cuando una salida temprana simplifique el flujo de la función.
+- Mantén cada función enfocada en una tarea y fácil de entender.
+- Una función corta es útil si su intención sigue siendo clara; la longitud por sí sola no es el objetivo.
+- Considera salidas tempranas cuando eviten niveles innecesarios de anidamiento.
 
-### Principio DRY (Don't Repeat Yourself)
+### Principio DRY (*Don't Repeat Yourself*)
 
-DRY propone evitar la duplicación de código. Cuando varios lugares repiten la misma lógica, centralizarla ayuda a simplificar las pruebas y facilita el mantenimiento. Aplicar este principio suele implicar refactorizar el código existente.
+DRY busca evitar duplicar conocimiento o reglas del sistema. Cuando una misma lógica aparece en varios lugares, centralizarla puede facilitar cambios y pruebas. Antes de extraer código, verifica que las repeticiones representan realmente la misma regla; abstraer prematuramente también puede dificultar el mantenimiento.
 
 ## Material del curso
 

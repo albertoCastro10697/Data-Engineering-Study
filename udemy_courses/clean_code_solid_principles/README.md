@@ -1,36 +1,12 @@
-# Clean Code & SOLID Principles
+# Clean Code y principios SOLID
 
-## 📖 Descripción
+Apuntes, ejemplos y ejercicios del curso de Clean Code y principios SOLID. El material está organizado por temas y se actualizará conforme avance el estudio.
 
-Esta carpeta forma parte del repositorio **Data-Engineering-Study**, un espacio dedicado a mi formación continua y al fortalecimiento de mis conocimientos en Ingeniería de Datos (*Data Engineering*).
+## Temas
 
-Aquí recopilaré mis **apuntes, ejemplos prácticos, ejercicios y aprendizajes** del curso de **Clean Code y Principios SOLID** de Udemy.
+- [Clean Code y deuda técnica](cleancode_deuda_tecnica/README.md): calidad del software, deuda técnica, nombres, funciones y DRY.
+- [Clases y comentarios](cleancode_clases_y_comentarios/README.md): principio de responsabilidad única, comentarios y uniformidad del código.
+- [Acrónimo STUPID](Acronimo_STUPID/README.md): seis code smells frecuentes y ejemplos.
+- [Principios SOLID](solid_principles/README.md): apuntes y ejemplos de los cinco principios.
 
-El objetivo es comprender y aplicar buenas prácticas de desarrollo de software para escribir código más limpio, legible, mantenible, escalable y fácil de probar.
-
-## 🎯 Objetivos de aprendizaje
-
-- Comprender los fundamentos de Clean Code.
-- Aplicar buenas prácticas de escritura y organización del código.
-- Estudiar los cinco principios SOLID.
-- Identificar y mejorar código mediante técnicas de refactorización.
-- Aplicar estos conocimientos en proyectos de Python y Data Engineering.
-
-## 📂 Contenido
-
-Esta carpeta se irá actualizando progresivamente con:
-
-- 📝 **Apuntes:** conceptos, definiciones y reflexiones del curso.
-- 💻 **Ejemplos:** implementaciones prácticas de los conceptos aprendidos.
-- 🧪 **Ejercicios:** prácticas para reforzar los conocimientos.
-- 🔧 **Refactorización:** ejemplos de código antes y después de aplicar buenas prácticas.
-
-## 🚀 Propósito
-
-Más allá de completar el curso, busco incorporar estos principios en mi trabajo diario como Data Engineer, especialmente en el desarrollo de pipelines ETL/ELT, módulos de Python y soluciones de procesamiento de datos.
-
----
-
-**Estado:** 📚 En aprendizaje
-
-*Este repositorio refleja mi proceso de aprendizaje continuo y evolución profesional en Data Engineering.*
+Los ejemplos de código de los principios SOLID están en `solid_principles/`.
