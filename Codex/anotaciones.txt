@@ -1,0 +1,14 @@
+AGENTS skills
+Los agentes tienen conocimiento limitado y posiblmente entrenados con malos patrones, etc
+Estos posiblmente no escriban el código exacto que nosotros querramos
+Estos posiblemente no sepan sobre algunas librerias o patrones.
+
+Wecan add extra skills to give the agent extra kwnoledge or extra tools to use and execute.
+
+Skills is a folder with a markdown file.
+my skill/
+    SKILL.md: This contains extra information or extra instructions that we want to expose to our agent.
+    scripts/: Optional, executable code.
+    references/ Optional, documentation
+    assets/ Optional, templates, resources
+    
