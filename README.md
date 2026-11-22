@@ -1,10 +1,12 @@
 # Data Engineering Study
 
-Repositorio personal para organizar apuntes, ejercicios y ejemplos de mi formación en ingeniería de datos y desarrollo de software.
+Repositorio personal de estudio con apuntes, cursos, ejercicios y proyectos de ingeniería de datos, desarrollo de software y prácticas de entrega continua.
 
-## Contenido
+## Áreas de estudio
 
-- [`udemy_courses/`](udemy_courses/): material de cursos, incluyendo apuntes y ejemplos de código.
-- [`Clean Code y principios SOLID`](udemy_courses/clean_code_solid_principles/README.md): notas sobre calidad de código, deuda técnica y diseño orientado a objetos.
+- [Cursos de Udemy](udemy_courses/): material de cursos y ejercicios. Incluye [Clean Code y principios SOLID](udemy_courses/clean_code_solid_principles/README.md), con apuntes sobre deuda técnica, clases, comentarios y diseño de software.
+- [Codex](Codex/README.md): apuntes, configuraciones, skills y un ejemplo de Databricks Asset Bundle.
+- [Databricks](<Databricks/README.md>): preparación para certificación, materiales de Databricks Academy y ejemplos con Databricks Asset Bundles.
+- [DataOps](Dataops/README.md): prácticas de GitLab CI/CD y una aplicación de aprendizaje con React y Vite.
 
-Este repositorio evoluciona a medida que avanzo en mis estudios y aplico lo aprendido.
+Los materiales se organizan por tema o curso y se amplían conforme avanza el estudio.

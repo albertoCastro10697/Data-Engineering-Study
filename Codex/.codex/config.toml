@@ -1,0 +1,20 @@
+# ==============================================================================
+# DEFAULT GLOBAL SETTINGS
+# These apply to every session unless overridden by a profile.
+# ==============================================================================
+ 
+# Use the standard agentic model by default
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+ 
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+
+# Let the agent decide when to ask for permission (balanced safety)
+approval_policy = "on-request" # default, you could omit this
+ 
+# Use the standard writable sandbox for the current project (is default)
+sandbox_mode = "workspace-write" # default, you could omit this
+ 
+# Use cached web search for speed and safety
+web_search = "cached" # default, you could omit this

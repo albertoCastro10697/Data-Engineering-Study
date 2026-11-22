@@ -1,0 +1,26 @@
+resources:
+  jobs:
+    job_notebook:
+      name: job_notebook
+      tasks:
+        - task_key: task_hola_mundo_notebook
+          notebook_task:
+            notebook_path: ../notebooks/print_hola_mundo.ipynb
+            source: WORKSPACE
+          job_cluster_key: task_notebook_cluster
+      job_clusters:
+        - job_cluster_key: task_notebook_cluster
+          new_cluster:
+            spark_version: 15.4.x-scala2.12
+            azure_attributes:
+              availability: SPOT_WITH_FALLBACK_AZURE
+            node_type_id: Standard_DS3_v2
+            spark_env_vars:
+              PYSPARK_PYTHON: /databricks/python3/bin/python3
+            data_security_mode: LEGACY_SINGLE_USER_STANDARD
+            runtime_engine: STANDARD
+            kind: CLASSIC_PREVIEW
+            is_single_node: false
+            num_workers: 8
+      queue:
+        enabled: true

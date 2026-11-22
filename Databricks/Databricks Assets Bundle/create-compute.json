@@ -1,0 +1,12 @@
+{
+"data_security_mode": "LEGACY_SINGLE_USER_STANDARD",
+"single_user_name": "albert_106@hotmail.com",
+"cluster_name": "Alberto - Clusters",
+"policy_id": "000CD1A6DFDD1E9D",
+"kind": "CLASSIC_PREVIEW",
+"spark_version": "15.4.x-scala2.12",
+"node_type_id": "Standard_D4ds_v4",
+"autotermination_minutes": 4320,
+"use_ml_runtime": true,
+"is_single_node": true
+}

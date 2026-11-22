@@ -1,0 +1,25 @@
+codex -- To initiate a terminal
+codex resume / codex resume -all --Continue a interactive session (shows a session picker initially)
+codex resume -last -- Continue the last interactive session
+codex "fix all type errors" -- Start new interactive session with initial prompt
+codex exec "fix all type errors" -- Start new non interactive session which returns to termianl once done, often is used in a automation
+codex cloud -- List and manage cloud tasks
+codex mcp -- Manage MCP servers (also use codex mcp list)
+codex mcp add, codex mcp remove
+codex fork / codex forl --all => Fork clone session from picker
+codex fork --last => Fork (clone) last session
+
+
+CLI Slash STEPS_COMMANDS
+/resume
+/model
+/permissions
+/review - Start a codex code review (for uncommited changes or againts base branch)
+/new - Start a new session
+/exit - End session
+/fork - Clone the current session and continue in the clone 
+/init - Analize project and create initial AGENTS.md file
+/compact - Summarize current context and clear context window
+/plan - Swith to plan mode
+/status -- Show remaining usage 
+/mcp -- Show MCP server status

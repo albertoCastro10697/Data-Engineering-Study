@@ -1,0 +1,13 @@
+resources:
+  jobs:
+    simple_notebook_job:
+      name: ${bundle.name}-${bundle.target}
+      tasks:
+        - task_key: run_simple_notebook
+          notebook_task:
+            notebook_path: ../src/simple_notebook.py
+          new_cluster:
+            spark_version: 15.4.x-scala2.12
+            node_type_id: Standard_DS3_v2
+            num_workers: 1
+
